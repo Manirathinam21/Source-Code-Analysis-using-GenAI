@@ -5,7 +5,7 @@
 Clone the repository
 
 ```bash
-Project repo: https://github.com/
+Project repo: https://github.com/Manirathinam21/Source-Code-Analysis-using-GenAI.git
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
