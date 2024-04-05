@@ -1,7 +1,7 @@
 import os
 from git import Repo
 from langchain.document_loaders.generic import GenericLoader
-from langchain.document_loaders.parser import languageParser
+from langchain.document_loaders.parsers import LanguageParser
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.text_splitter import Language
 from langchain.embeddings import OpenAIEmbeddings
@@ -16,7 +16,7 @@ def load_repo(repo_path):
     loader =GenericLoader.from_filesystems(repo_path, 
                           glob= "**/*",
                           suffixes=[".py"],
-                          parser= languageParser(language= Language.language.PYTHON, parser_threshold=500)
+                          parser= LanguageParser(language=Language.PYTHON, parser_threshold=500)
                           )
     documents= loader.load()
     return documents

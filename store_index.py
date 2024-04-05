@@ -1,5 +1,5 @@
 import os
-from dotenv import load_env
+from dotenv import load_dotenv
 from src.helper import repo_ingestion, load_repo, text_splitter, load_embedding
 from langchain.vectorstores import Chroma
 from langchain.memory import ConvertionSummaryMemory
@@ -7,7 +7,7 @@ from langchain.chains import ConversationalRetrievalChain
 
 
 # Loading OpenAI API_KEY
-load_env()
+load_dotenv()
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 
